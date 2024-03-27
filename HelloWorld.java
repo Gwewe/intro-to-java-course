@@ -1,7 +1,7 @@
-package com.codingblackfemales.academu;
+package com.codingblackfemales.academy;
 
 public class HelloWorld {
     public static void main(String... args) {
-        system.System.out.println("Hello World! It's Wednesday Yay!");
+        System.out.println("Hello World! It's Wednesday Yay!");
     }
 }
