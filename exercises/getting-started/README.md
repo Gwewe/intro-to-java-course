@@ -1,4 +1,4 @@
-# Our First Java Program
+# Wedna First Java Program
 
 [![Java Language](https://img.shields.io/badge/PLATFORM-OpenJDK-3A75B0.svg?style=for-the-badge)][1]
 
