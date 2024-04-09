@@ -1,27 +1,83 @@
 package com.cbfacademy;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.function.IntPredicate;
+import java.util.stream.IntStream;
 
 public class FlowControlExercises {
 
     public List<String> fizzBuzz(List<Integer> numbers) {
         // TODO - Implement this method such that
         //  it creates a list where for each element of the input list ${numbers}
-        //  - if the ${element} is divisible by 3, it adds “Fizz” to the list
-        //  - if the ${element} is divisible by 5, it adds “Buzz” to the list
-        //  - if the ${element} is divisible by both 3 and 5, it adds “FizzBuzz” to the list
-        //  - it adds the element to the list in any other case
-        //  - it returns the constructed list
-        throw new RuntimeException("Not implemented");
+        List<String> fizzBuzz = new ArrayList<>();
+
+        for(int i = 0; i < numbers.size(); i++) {
+            Integer number = numbers.get(i);
+            if (number % 3 == 0 && number % 5 == 0 ){
+                fizzBuzz.add("FizzBuzz");
+            } else if (number % 3 == 0){
+                fizzBuzz.add("Fizz");
+            } else if (number % 5 == 0){
+                fizzBuzz.add("Buzz");
+            } else {
+                fizzBuzz.add(Integer.toString(number));
+            }
+        }
+        return fizzBuzz;
     }
 
     public String whichMonth(Integer number) {
         // TODO - Implement this method such that
         //  - it returns the month corresponding to the input ${number}
         //  - if the ${number} is invalid, the method should return "Invalid month number"
-        throw new RuntimeException("Not implemented");
+        String fromNbtoMonth = " ";
+        switch (number) {
+            case 1:
+                fromNbtoMonth ="January";
+                break;
+            case 2:
+                fromNbtoMonth = "February";
+                break;
+            case 3:
+                fromNbtoMonth = "March";
+                break;
+            case 4:
+                fromNbtoMonth = "April";
+                break;
+            case 5:
+                fromNbtoMonth = "May";
+                break;
+            case 6:
+                fromNbtoMonth = "June";
+                break;
+            case 7:
+                fromNbtoMonth = "July";
+                break;
+            case 8:
+                fromNbtoMonth = "August";
+                break;
+            case 9:
+                fromNbtoMonth = "September";
+                break;
+            case 10:
+                fromNbtoMonth = "October";
+                break;
+            case 11:
+                fromNbtoMonth = "November";
+                break;
+            case 12:
+                fromNbtoMonth = "December";
+                break;                
+            default:
+                fromNbtoMonth = "Invalid month number";
+                break;
+        }
+        return fromNbtoMonth;
     }
 
     public Map<String, Integer> sumOfOddsAndSumOfEvens() {
@@ -31,14 +87,26 @@ public class FlowControlExercises {
         //  - determines the sum of all the odd numbers in the list
         //  - returns a map with two entries:
         //      {"SumOfEvens", calculatedSumOfEvens}, {"SumOfOdds", calculatedSumOfOdds}
-        throw new RuntimeException("Not implemented");
+        final IntStream numbers = IntStream.range(1, 101);
+        final IntPredicate isEven = (int i) -> {return i % 2 == 0;};
+        final IntPredicate isOdd = (int i) -> {return i % 2 != 0;};
+        
+        int SumOfEvens = numbers.filter(isEven).sum();
+        int SumOfOdds = numbers.filter(isOdd).sum();
+
+        HashMap<String, Integer> map = new HashMap<>();
+        map.put("SumOfEvens", SumOfEvens);
+        map.put("SumOfOdds", SumOfOdds);
+
+        return map;
     }
 
     public List<Integer> reverse(ArrayList<Integer> numbers) {
         // TODO - Implement this method such that
         //  - it takes an array list of integers
         //  - it returns the list in reverse order
-        throw new RuntimeException("Not implemented");
+        Collections.reverse(numbers);
+        return numbers;
     }
 
     public String getName() {
