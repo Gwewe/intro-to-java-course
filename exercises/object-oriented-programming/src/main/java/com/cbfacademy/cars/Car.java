@@ -1,16 +1,17 @@
 package com.cbfacademy.cars;
 
-public class cars {
+
+public class Car {
     private String make;
     private String model;
     private String colour;
     private int year;
 
-    /*The constructor */
-    public cars(String make, String model, String colour, int year) {
+    /*The constructor this.colour, this.make, this.model, this.year*/
+    public Car(String colour, String make, String model, int year) {
+        this.colour = colour;
         this.make = make;
         this.model = model;
-        this.colour = colour;
         this.year = year;
     }
 
@@ -54,11 +55,12 @@ public class cars {
     /*Method to get the car details, including the make, model, colour and year */
     public String getDetails(){
         String carDetails = String.format(
-            "The car make is %s, the car model is %s, the car colour is %s, and the car year is %s", 
-            this.make, this.model, this.colour, this.year
+            "a %s %s %s from %s", 
+            this.colour, this.make, this.model, this.year
             );
+            /*format model: a blue Volvo V40 from 2012 */
 
         return carDetails;
-    };
+    };    
 
 };
