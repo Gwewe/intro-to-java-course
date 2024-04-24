@@ -48,7 +48,10 @@ public class Account {
 
     @Override
     public String toString() {
-        // TODO Auto-generated method stub, have to search more information on it, to understand more!
-        return super.toString();
+        //Account no: 12345 and 
+        //String balanceN = String.valueOf(balance);
+        ///return "Account no: " + Integer.toString(accountNumber)  + " Balance: £" + balanceN;
+        return String.format("Account no: %s. Balance: £%.2f", accountNumber,balance);
+
     }
 }

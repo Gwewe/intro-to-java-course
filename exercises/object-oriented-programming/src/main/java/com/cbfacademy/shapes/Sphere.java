@@ -6,6 +6,7 @@ public class Sphere extends Shape {
     public Sphere(double radius){
         //constructor
         this.radius = radius;
+        super.name = "Sphere";
     }
 
     @Override

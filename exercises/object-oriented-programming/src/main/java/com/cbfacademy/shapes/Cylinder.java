@@ -8,6 +8,7 @@ public class Cylinder extends Shape {
         //constructor
         this.radius = radius;
         this.height = height;
+        super.name = "Cylinder";
     }
 
     @Override

@@ -1,7 +1,7 @@
 package com.cbfacademy.shapes;
 
 public abstract class Shape {
-    String Name;
+    String name;
     
     public abstract double getArea();
     //returns the area of the shape
@@ -9,7 +9,8 @@ public abstract class Shape {
     
     public String getName() {
         // returns name of shape
-        return this.Name;
+        return this.name;
+        
     }
     
 

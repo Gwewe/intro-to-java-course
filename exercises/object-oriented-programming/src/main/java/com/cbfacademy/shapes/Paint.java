@@ -1,5 +1,6 @@
 package com.cbfacademy.shapes;
 
+
 public class Paint {
 
     private double coverage;
@@ -10,9 +11,9 @@ public class Paint {
     }
     
     
-    public getAmount(Shape shape) {
+    public double getAmount(Shape shape) {
         //returns the amount of paint (measured in gallons) needed to paint a given shape
-        
+        return shape.getArea() / coverage;
     }
 
 }

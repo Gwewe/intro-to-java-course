@@ -8,6 +8,7 @@ public class Rectangle extends Shape {
         //constructor
         this.length = length;
         this.width = width;
+        super.name = "Rectangle";
     }   
 
     @Override

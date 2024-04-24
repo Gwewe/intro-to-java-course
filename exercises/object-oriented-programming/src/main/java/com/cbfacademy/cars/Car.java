@@ -8,7 +8,7 @@ public class Car {
     private int year;
 
     /*The constructor this.colour, this.make, this.model, this.year*/
-    public Car(String colour, String make, String model, int year) {
+    public Car(String make, String model, String colour, int year) {
         this.colour = colour;
         this.make = make;
         this.model = model;
@@ -17,34 +17,25 @@ public class Car {
 
     /*Method to return car make */
     public String getMake(){
-        String carMake = this.make;
-
-        return carMake;
+        return make;
     }
 
     /*Method to return the car model */
     public String getModel(){
-        String carModel = this.model;
-
-        return carModel;
+        return model;
     }
 
     /*Method to return years when car was made */
     public int getYear(){
-        Integer carYear = this.year;
-
-        return carYear;
+        return this.year;
     }
-
 
 
     /*method to get colour of car */
     public String getColour() {
-        String carColour = this.colour;
-
-        return carColour;
+        return this.colour;
     } 
-
+//String make, String model, String colour, int year
 
 
     /* Method to set the colour*/
