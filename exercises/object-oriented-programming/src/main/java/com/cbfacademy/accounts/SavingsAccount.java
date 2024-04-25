@@ -11,7 +11,7 @@ public class SavingsAccount extends Account {
 
     public void applyInterest(){
         //applies interest to the account
-        this.interestRate = balance * (interestRate / 100);
+        this.interestRate = balance * interestRate;
         balance += interestRate;
     }
 

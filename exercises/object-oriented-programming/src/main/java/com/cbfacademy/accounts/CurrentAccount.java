@@ -13,7 +13,7 @@ public class CurrentAccount extends Account {
 
     public double getOverdraftLimit(){
         //returns the current overdraft limit
-        return this.overdraftLimit;
+        return overdraftLimit;
     }
 
 
