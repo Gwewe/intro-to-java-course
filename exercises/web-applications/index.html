@@ -8,11 +8,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
     </head>
-
-    <h3>Email</h3>
-    <input type="email" id="email" name="email" placeholder="example@gmail.com"/>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;}
+        h3 {
+            color: rgb(78, 77, 77);}
+        label {
+            font-size: 0.8rem;
+        }
+    </style>
+<body>
+    <form>
+    <div label for="email">
+        <h3>Email</h3>
+        <input type="email" id="email" name="email" placeholder="example@gmail.com"/>
     <br>
-    <h3>Password</h3>
-    <input type="password" id="password" name="password" placeholder="Enter your password">
+    </div>
+    <div label for="password">
+        <h3>Password</h3>
+        <input type="password" id="password" name="password" placeholder="Enter your password">
+    </div>
+    <br>
+    <div>
+        <input type="checkbox" id="rememberMe" name="rememberMe"> 
+        <label for="rememberMe">Remember me</label>
+    </div>
+    </form>
+</body>
 
 </html>
