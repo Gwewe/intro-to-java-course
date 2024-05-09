@@ -26,4 +26,5 @@ public static Boolean areEqual(String word1, String word2) {
 public static String format(String item, int quantity, double price) {
     // TODO: Write code to return a string formatted as follows: "Item: [item]. Price: £[amount]. Quantity: [quantity]"
     String.format("Item: %s. Price: £%.2f. Quantity: %d", item, price, quantity);
-};
+}
+

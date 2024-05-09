@@ -27,20 +27,23 @@ public class FileExtension {
     //when the file name is null or an empty string.
     }
 
-    
-
-
     public Map<String, Integer> map(List<String> filenames) {
         //The map method should:
         // check each provided file's extension and map the returned value as 1 if true or 0 if false
         //map -1 when an exception occurs
         Map<String, Integer> mapExcep = new HashMap<>();
 
-        for (String fileName : filenames) {
-            ss
+        for (String filename : filenames) {
+            try {
+                if (filename.endsWith(".java")) {
+                    mapExcep.put(filename, 1);
+                } else {
+                    mapExcep.put(filename, 0);
+                }
+            } catch (Exception e) {
+                mapExcep.put(filename, -1);
+            }
         }
+        return mapExcep;
     }
-
-
-
 }
